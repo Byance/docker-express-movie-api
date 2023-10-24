@@ -1,0 +1,17 @@
+version: "3.8"
+services:
+  express-server:
+    container_name: server
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: s-dev
+    volumes:
+      - ./server:/app
+      - servermodules:/app/node_modules
+      - /app/node_modules
+    ports:
+      - "8080:3000"
+volumes:
+  servermodules: {}

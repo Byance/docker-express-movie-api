@@ -1,0 +1,17 @@
+{
+  "name": "learning-docker",
+  "description": "LEARNING Docker Maintainer <docker-maint@learning.com>",
+  "authors": "Byance",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "@faker-js/faker": "8.0.2"
+  },
+  "devDependencies": {
+    "ts-node-dev": "2.0.0"
+  }
+}
