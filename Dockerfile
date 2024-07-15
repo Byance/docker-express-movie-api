@@ -35,8 +35,6 @@ CMD [ "pnpm", "run", "build" ]
 
 FROM base-s AS s-dev
 ENV NODE_ENV=development
-RUN apt-get update \
- && apt-get install -y procps
 RUN --mount=type=cache,id=npm,target=/pnpm/store pnpm install
 COPY ./server /app
 EXPOSE 3000
